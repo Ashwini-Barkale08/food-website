@@ -1,0 +1,130 @@
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: tomato;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed */
+}
+
+.navbar-search-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #495574;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.navbar button:hover {
+    background-color: aliceblue;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #495574;
+}
+
+/* Media Queries */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .navbar-right {
+        gap: 30px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+    }
+
+    .navbar button {
+        padding: 8px 25px;
+        font-size: 15px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 22px; /* Corrected from 202px to 22px */
+    }
+
+    .navbar button {
+        padding: 7px 20px;
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-right {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust gap as needed */
+    }
+
+    .navbar button {
+        padding: 6px 15px;
+        font-size: 13px; /* Adjust font size */
+        width: 100%; /* Make button full width */
+    }
+}
